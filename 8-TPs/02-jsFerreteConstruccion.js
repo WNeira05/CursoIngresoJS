@@ -53,6 +53,7 @@ function Materiales ()
     let area;
     let cemento;
     let cal;
+    let mensaje;
 
     largo = document.getElementById("txtIdLargo").value;
     ancho = document.getElementById("txtIdAncho").value;
@@ -66,7 +67,7 @@ function Materiales ()
     cemento = area * 2;
     cal = area * 3;
 
-    alert(`Para un contrapiso de ${area} m2, necesito comprar ${cemento} bolsas de cemento y ${cal} bolsas de cal`)
-
+    mensaje = `Para un contrapiso de ${area} m2, necesito comprar ${cemento} bolsas de cemento y ${cal} bolsas de cal`
+    alert (mensaje);
 
 }
