@@ -1,44 +1,63 @@
 /*
-Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
-e informar la suma acumulada y el promedio.
+2)De una compra debes ingresar una cantidad indeterminada de cortes de carne vacuna,
+ validando los siguientes datos:
 
-WALTER NEIRA - WHILE 07 - DIV I
+nombre del corte, precio, peso en kilogramos, tipo(con hueso o sin hueso)
+a)informar el peso total de la compra.
+b)el nombre del corte más caro de los sin hueso.
+c)el nombre del corte más liviano de los con hueso.
 */
 function mostrar()
 {
-	let numeroIngresado;
 	let respuesta;
-	let suma;
-	let promedio;
-	let contador;
+    let corteCarne;
+    let importe;
+    let peso;
+    let tipo;
+    
+	respuesta = true;
 
-	respuesta = "si";//i=0
-	//respuesta = true;
-	suma = 0;
-	contador = 0;
+    while(respuesta == true)
+        {
+            corteCarne = prompt("Ingrese el corte de carne");
 
-	while(respuesta == "si")//i<5
-	{
-		numeroIngresado = prompt("Ingrese un numero: ");
-		numeroIngresado = parseInt(numeroIngresado);
-		while(numeroIngresado <-100 || numeroIngresado > 100)
-		{
-			numeroIngresado = prompt("Reingrese otro numero: ");
-			numeroIngresado = parseInt(numeroIngresado);
-		}
+            importe = prompt("Ingrese el importe");
+            importe = parseFloat(importe);
+            while(isNaN(importe) || importe < 0)
+            {
+                importe = prompt("Error, ingrese un importe valido");
+                importe = parseFloat(importe);
+            }
 
-		suma = suma + numeroIngresado;
+            peso = prompt("Ingrese el peso en Kg");
+			peso = parseFloat(peso);
+			while(isNaN(peso) || peso < 0)
+			{
+				peso = prompt("Error. Ingrese el peso en Kg");
+				peso = parseInt(peso);
+			}
 
-		contador++;
-		respuesta = prompt("Desea ingresar otro numero?"); //i++
-	}
+            tipo = prompt("Ingrese el tipo de carne: con hueso o sin hueso");
+            while(tipo!="con hueso" && tipo!="sin hueso")
+            {
+                tipo = prompt("Tipo de carne incorrecto. Ingrese el tipo de carne: con hueso o sin hueso ");
+            }
+            
+            
+            
+            
+            
+            
+    
+            respuesta = confirm("Quiere ingresar otro corte de carne?");
+            
+        }// FIN DEL WHILE
+	
+	
 
-	promedio = suma/contador;
-
-	document.getElementById("txtIdSuma").value = suma;
-	document.getElementById("txtIdPromedio").value = promedio;
-
-
+			document.write( + "<br>");
+			document.write( +  "<br>");
+			document.write( + "<br>");
 
 
 }//FIN DE LA FUNCIÓN

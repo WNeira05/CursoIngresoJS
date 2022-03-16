@@ -51,6 +51,8 @@ function mostrar()
 		{
 			sumaPositivos += numeroIngresado;
 			contadorPositivos++;
+
+	//10-De los positivos el mas grande
 			if(numeroIngresado>maximoPositivo || contadorPositivos==1)
 			{
 				maximoPositivo = numeroIngresado;
@@ -74,7 +76,7 @@ function mostrar()
 			}
 		}
 
-		if(numeroIngresado%2 == 0)
+		if(numeroIngresado %2 == 0)
 		{
 			contadorPares++;
 		}

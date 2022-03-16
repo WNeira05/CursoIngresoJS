@@ -3,7 +3,7 @@ Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 //NEIRA WALTER - WHILE 9 - DIV I
 
-function mostrar()
+/*function mostrar()
 {	
 	let numeroIngresado;
 	let respuesta;
@@ -23,7 +23,7 @@ function mostrar()
 		{
 			maximo = numeroIngresado;
 			minimo = numeroIngresado;
-			banderaPrimerIngreso = true;
+			banderaPrimerIngreso = true
 		}
 		else
 		{
@@ -45,4 +45,55 @@ function mostrar()
 	document.getElementById("txtIdMinimo").value = minimo;
 	
 
+}//FIN DE LA FUNCIÓN*/
+
+
+function mostrar()
+{	let numero;
+	let respuesta;
+	let numeroMaximo;
+	let numeroMinimo;
+	let banderaNumeroMinimo;
+	let banderaNumeroMaximo
+
+    respuesta = true;
+	banderaNumeroMaximo = false;
+	banderaNumeroMinimo = false;
+
+    while(respuesta == true)
+        {
+            numero = prompt("INgrese un numero")
+			numero = parseInt(numero);
+			while( isNaN(numero))
+			{
+				numero = prompt("Error. INgrese un numero")
+				numero = parseInt(numero);
+			}
+
+			
+            respuesta = confirm("Quiere ingresar otro numero?");
+            
+        }// FIN DEL WHILE
+		
+		if (numero > numeroMaximo || banderaNumeroMaximo == false) 
+		{
+			numeroMaximo = numero;
+			banderaNumeroMaximo = true;
+		}
+
+		if (numero < numeroMinimo || banderaNumeroMinimo == false) 
+		{
+			numeroMinimo = numero;
+			banderaNumeroMinimo = true;
+		}
+
+
+		document.getElementById("txtIdMaximo").value = numeroMaximo;
+		document.getElementById("txtIdMinimo").value = numeroMinimo;
+		
 }//FIN DE LA FUNCIÓN
+
+/*
+Al presionar el botón pedir  números  hasta que el usuario quiera,
+mostrar el número máximo y el número mínimo ingresado.*/
+//NEIRA WALTER - WHILE 9 - DIV I
